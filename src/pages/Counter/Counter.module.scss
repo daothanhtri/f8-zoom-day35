@@ -1,0 +1,90 @@
+.counterContainer {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title {
+  color: #34495e;
+  font-size: 2.2em;
+  margin-bottom: 25px;
+}
+
+.countDisplay {
+  font-size: 3.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  display: inline-block; /* Để background-color chỉ bao quanh số */
+}
+
+.positive {
+  color: #28a745;
+  background-color: #e6ffe6;
+}
+.negative {
+  color: #dc3545;
+  background-color: #ffe6e6;
+}
+.zero {
+  color: #6c757d;
+  background-color: #f8f9fa;
+}
+
+.statusMessage {
+  font-style: italic;
+  font-size: 1.1em;
+  color: #555;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.button {
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+  color: #fff;
+  font-weight: 600;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.increment {
+  background-color: #28a745;
+  &:hover {
+    background-color: #218838;
+  }
+}
+
+.decrement {
+  background-color: #dc3545;
+  &:hover {
+    background-color: #c82333;
+  }
+}
+
+.reset {
+  background-color: #007bff;
+  &:hover {
+    background-color: #0056b3;
+  }
+}

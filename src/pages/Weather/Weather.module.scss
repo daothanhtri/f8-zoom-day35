@@ -1,0 +1,146 @@
+.weatherApp {
+  text-align: center;
+  max-width: 550px;
+  margin: 50px auto;
+  padding: 35px;
+  background: linear-gradient(135deg, #a8dadc 0%, #457b9d 100%);
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.weatherApp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIxIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNCkiLz48L3N2Zz4=")
+    repeat;
+  background-size: 10px 10px;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.weatherAppTitle {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.citySelector {
+  margin-bottom: 30px;
+  z-index: 1;
+  position: relative;
+}
+
+.citySelector label {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.citySelector select {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1em;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  width: 100%;
+  max-width: 280px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.weatherInfo {
+  margin-top: 25px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.weatherCityName {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #f1faee;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.weatherIcon {
+  font-size: 5em;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.weatherInfo p {
+  font-size: 1.3em;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.weatherInfo strong {
+  font-weight: bold;
+  color: #ffee32;
+}
+
+.refreshButton {
+  margin-top: 35px;
+  background-color: #1d3557;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  border: none;
+
+  &:hover {
+    background-color: #2b568d;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 600px) {
+  .weatherApp {
+    margin: 20px;
+    padding: 25px;
+  }
+  .weatherAppTitle {
+    font-size: 2em;
+  }
+  .weatherCityName {
+    font-size: 2em;
+  }
+  .weatherIcon {
+    font-size: 4em;
+  }
+  .weatherInfo p {
+    font-size: 1.1em;
+  }
+  .citySelector select {
+    max-width: 100%;
+  }
+}
